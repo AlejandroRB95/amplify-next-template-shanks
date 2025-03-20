@@ -9,7 +9,8 @@ import outputs from "@/amplify_outputs.json";
 import "@aws-amplify/ui-react/styles.css";
 import "@aws-amplify/ui-react/styles.css";
 import {Authenticator} from '@aws-amplify/ui-react'
-import { User } from "aws-cdk-lib/aws-iam";
+import { FileUploader } from '@aws-amplify/ui-react-storage';
+import '@aws-amplify/ui-react/styles.css';
 
 Amplify.configure(outputs);
 
@@ -42,6 +43,7 @@ export default function App() {
       {({signOut, user})=> (
         <main>
         <h1>CityBox Incorporated</h1>
+        <h1>Archivos de {user?.signInDetails?.loginId}</h1>
         <button onClick={createTodo}>+ new</button>
         <ul>
           {todos.map((todo) => (
@@ -63,6 +65,11 @@ export default function App() {
       </main>
       )}
     </Authenticator>
+    
 
   );
 }
+
+
+
+
