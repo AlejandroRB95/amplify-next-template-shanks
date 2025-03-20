@@ -41,7 +41,7 @@ export default function App() {
     <Authenticator>
       {({signOut, user})=> (
         <main>
-        <h1>Mis Archivos</h1>
+        <h1>CityBox Incorporated</h1>
         <button onClick={createTodo}>+ new</button>
         <ul>
           {todos.map((todo) => (
